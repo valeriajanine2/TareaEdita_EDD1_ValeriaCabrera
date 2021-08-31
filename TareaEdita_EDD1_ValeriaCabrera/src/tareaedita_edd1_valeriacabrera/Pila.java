@@ -20,9 +20,6 @@ public class Pila extends Lista{
     public Pila(ArrayList<Character> elementos){
         super(elementos);
     }
-    public void RECORRER(){
-        
-    }
     
     @Override
     boolean VACIA(Lista P){
@@ -40,7 +37,7 @@ public class Pila extends Lista{
     
     @Override
     void SACA(Lista P){
-        P.elementos.remove(P);
+        P.elementos.remove(P.elementos.size()-1);
     }
     
     @Override
@@ -50,9 +47,13 @@ public class Pila extends Lista{
     
     @Override
     void IMPRIME_LISTA(Lista P){
-        for (int i = 1; i < P.elementos.size(); i++) {
-            System.out.println(P.elementos.get(i));
-        }
+        if(P.VACIA(P)){
+            System.out.println("La pila esta vacia");
+        }else{
+            for (int i = 0; i < P.elementos.size(); i++) {
+                System.out.println(P.elementos.get(i));
+            }
+        } 
     }
     
 }

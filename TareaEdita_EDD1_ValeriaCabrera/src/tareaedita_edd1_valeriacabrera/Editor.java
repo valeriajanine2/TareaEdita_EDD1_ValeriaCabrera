@@ -12,18 +12,16 @@ package tareaedita_edd1_valeriacabrera;
 public class Editor {
     
     private Pila P = new Pila();
-    private char c;
     
     public Editor(){
         
     }
     
-    public Editor(char c){
-        this.c=c;
+    public Pila getPila(){
+        return this.P;
     }
     
-    public void EDITA(){
-        this.P.ANULA(P);
+    public void EDITA(char c){
         if(c == '#'){
             P.SACA(P);
         }else if(c == '@'){
@@ -31,7 +29,6 @@ public class Editor {
         }else{
             P.METE(c, P);
         }
-        P.IMPRIME_LISTA(P);
     }
     
 }
