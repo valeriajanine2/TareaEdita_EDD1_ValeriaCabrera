@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package tareaedita_edd1_valeriacabrera;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,11 +12,13 @@ package tareaedita_edd1_valeriacabrera;
  */
 public abstract class Lista {
   
-    protected int tope;
-    protected char [] elementos = new char [100];
+    protected ArrayList<Character> elementos = new ArrayList();
     
-    public Lista(int tope, char [] elementos){
-        this.tope=tope;
+    public Lista(){
+        //constructor vacio
+    }
+    
+    public Lista(ArrayList<Character> elementos){
         this.elementos=elementos;
     }
     
@@ -23,6 +26,7 @@ public abstract class Lista {
     abstract void SACA(Lista P);
     abstract void ANULA(Lista P);
     abstract void IMPRIME_LISTA(Lista P);
+    abstract boolean VACIA(Lista P);
     
     
     
